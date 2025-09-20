@@ -1,12 +1,36 @@
-# React + Vite
+# William Xu — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
+- **React + Vite**: Fast, modern frontend stack
+- **Tailwind CSS**: Utility-first styling for rapid UI development
+- **Responsive Design**: Optimized for mobile, tablet, and desktop
+- **Dark/Light Theme Toggle**: Accessible and visually appealing
+- **Sticky Sidebar**: Easy navigation between sections
+- **Dynamic Sections**: About, Experience, Projects, Awards, Skills
+- **Contact Section**: Email, phone, and social links with icons
+- **Accessible**: Keyboard and screen reader friendly
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to Run Locally
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
+2. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+3. Open the local URL (usually http://localhost:5173) in your browser.
 
-## Expanding the ESLint configuration
+## Customization
+- All content is managed in `src/App.jsx`.
+- Easily update sections, links, and icons.
+- Favicon and site title can be changed in `index.html`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Credits
+- Inspired by Brittany Chiang's portfolio layout
+- Built by William Xu
+
+---
+Feel free to fork and adapt for your own use!
