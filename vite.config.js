@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   base: '/Personal-Portfolio/', // Set base for GitHub Pages
-  plugins: [react(), tailwindcss()]
+  plugins: [react(), tailwindcss()],
+  base: '/williamxu-portfolio'
 })
