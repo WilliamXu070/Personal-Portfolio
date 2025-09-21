@@ -1,4 +1,5 @@
 import React, { useState, createContext, useContext, useEffect } from "react";
+import { ThreeShowcase } from './components/ThreeShowcase';
 
 // Brittany Chiang–style layout: sticky left sidebar (name, role, intro, section nav)
 // with a scrollable right content column using lighthearted light/dark theme. Tailwind only.
@@ -216,6 +217,7 @@ export default function PersonalSite() {
   const [hoveredSection, setHoveredSection] = useState(null);
   const [theme, setTheme] = useState('dark');
   const [activeSection, setActiveSection] = useState('about');
+  const [showShowcase, setShowShowcase] = useState(false);
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
@@ -258,8 +260,21 @@ export default function PersonalSite() {
       <div className="fixed top-6 right-6 z-50">
         <ThemeToggle />
       </div>
+      {/* 3D Showcase Button */}
+      <div className="fixed top-6 left-6 z-50">
+        <button
+          onClick={() => setShowShowcase(true)}
+          className={`px-4 py-2 rounded-lg border transition-all duration-300 hover:-translate-y-0.5 ${
+            theme === 'dark'
+              ? 'border-gray-700 bg-gray-900/70 hover:bg-gray-800 text-white'
+              : 'border-gray-300 bg-gray-100/80 hover:bg-gray-200 text-black'
+          }`}
+        >
+          3D Showcase
+        </button>
+      </div>
       
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-12 overflow-x-hidden">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-12">
         {/* Responsive 1 or 2‑column layout */}
         <div className="flex flex-col md:grid md:gap-10 md:grid-cols-[1fr_1.6fr] lg:grid-cols-[1fr_1.8fr] py-8 sm:py-12 md:py-14">
           {/* Left sticky sidebar */}
@@ -594,6 +609,9 @@ export default function PersonalSite() {
         </div>
       </div>
     </div>
+    {showShowcase && (
+      <ThreeShowcase onClose={() => setShowShowcase(false)} />
+    )}
     </ThemeContext.Provider>
   );
 }
